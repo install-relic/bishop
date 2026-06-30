@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bishop</title>
+  <meta name="description" content="Bishop — get in touch." />
+  <meta property="og:title" content="Bishop" />
+  <meta property="og:description" content="Bishop — get in touch." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bishop.contact" />
+  <meta property="og:image" content="signet.png" />
+  <link rel="icon" type="image/png" href="signet.png" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #000000;
+      --muted: #6b6b6b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .signet {
+      width: auto;
+      height: clamp(56px, 11vw, 96px);
+      margin-bottom: 2rem;
+    }
+    .wordmark {
+      width: clamp(220px, 46vw, 380px);
+      height: auto;
+      display: block;
+    }
+    .tagline {
+      margin-top: 1.75rem;
+      font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+      color: var(--muted);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      max-width: 34ch;
+    }
+    .cta {
+      margin-top: 2.75rem;
+    }
+    .cta a {
+      display: inline-block;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.85rem 2.1rem;
+      border: 1.5px solid var(--ink);
+      border-radius: 999px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .cta a:hover {
+      background: var(--ink);
+      color: var(--bg);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="signet" src="signet.png" alt="Bishop" />
+    <img class="wordmark" src="wordmark.png" alt="Bishop" />
+    <p class="tagline">Strategy, moved with intent.</p>
+    <div class="cta">
+      <a href="mailto:h@taa.world">Get in touch</a>
+    </div>
+  </main>
+  <footer>
+    &copy; <span id="year"></span> Bishop
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
